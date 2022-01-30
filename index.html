@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Cards</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Memory Cards</h1>
+      <button type="btn" class="add-btn">+Add New Card</button>
+      <div class="card flip-card">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <p class="questions"></p>
+          </div>
+          <div class="flip-back">
+            <p class="answers"></p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-grp">
+        <button type="btn" id="prev">Prev</button>
+        <button type="btn" id="next">Next</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="new-card">
+        <h1>Add New Card</h1>
+        <p>Question</p>
+        <input
+          type="text"
+          placeholder="Enter Question...."
+          class="question"
+          name="question"
+        />
+        <p>Answer</p>
+        <input
+          type="text"
+          placeholder="Enter Answer...."
+          class="answer"
+          name="answer"
+        />
+        <button type="submit" class="added-btn">+Add New Card</button>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Signika Negative", sans-serif;
+  background: rgb(221, 221, 221);
+  background: linear-gradient(
+    90deg,
+    rgba(221, 221, 221, 1) 0%,
+    rgba(221, 221, 221, 1) 50%,
+    rgba(30, 93, 161, 1) 50%
+  );
+  padding: 48px;
+  text-align: center;
+  color: white;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1::first-letter {
+  font-size: 2em;
+}
+
+.container,
+.new-card {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.new-card {
+  display: flex;
+}
+p {
+  font-size: 3em;
+  color: #002d62;
+}
+input {
+  padding: 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px;
+  font-family: "Signika Negative", sans-serif;
+}
+.added-btn {
+  margin-top: 5%;
+}
+.card {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 255px;
+  visibility: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #008e97;
+}
+.flip-inner {
+  position: relative;
+  transition: all 0.2s;
+  transform-style: preserve-3d;
+  /* overflow: hidden; */
+  text-align: center;
+  height: 100%;
+}
+.card:hover .flip-inner {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.flip-front,
+.flip-back {
+  position: absolute;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  color: #002d62;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .flip-front {
+  z-index: 2;
+} */
+.flip-back {
+  transform: rotateY(180deg);
+}
+button {
+  /* background-color: white; */
+  color: #002d62;
+  font-size: 23px;
+  border: none;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  font-family: "Signika Negative", sans-serif;
+  cursor: pointer;
+}
+button::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #002d62;
+  transition: all 0.2s ease-out;
+  transform: translateX(-100%);
+  color: white;
+}
+button:hover::before {
+  transform: translateX(0);
+}
+button:hover {
+  color: white;
+}
+.btn-grp {
+  width: -webkit-fill-available;
+}
+#next {
+  margin-left: 4%;
+}
